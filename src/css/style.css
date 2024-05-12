@@ -1,0 +1,167 @@
+/* Add more creative styling to enhance the appearance */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.voting-id-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.voting-id-form p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.voting-id-form input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.voting-id-form button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.voting-id-form button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.positions {
+    margin-bottom: 30px;
+}
+
+.positions h2 {
+    color: #333;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.candidates-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.candidate {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.candidate img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.candidate:hover img {
+    transform: scale(1.1);
+}
+
+.candidate-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.candidate:hover .candidate-overlay {
+    opacity: 1;
+}
+
+.candidate p {
+    color: #333;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.vote-form {
+    text-align: center;
+}
+
+.vote-form p {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.vote-form button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.vote-form button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}

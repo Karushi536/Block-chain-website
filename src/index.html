@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOKA Voting App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to JOKA Voting App</h1>
+
+        <!-- Voting ID Form -->
+        <div class="voting-id-form">
+            <p>Please enter your voting ID:</p>
+            <input type="text" id="voter-id" placeholder="Enter your ID">
+            <button id="submit-button">Submit</button>
+        </div>
+
+        <!-- Positions Section (Initially hidden) -->
+        <div class="positions" id="positions" style="display: none;">
+            <h2>Positions</h2>
+            <div class="navigation">
+                <a href="#" id="presidency" class="nav-button">President</a>
+                <!-- Add links for other positions here -->
+            </div>
+        </div>
+
+        <!-- Candidates List Section -->
+        <div class="candidates-list" id="candidates-list"></div>
+
+        <!-- Vote Form (Initially hidden) -->
+        <div class="vote-form" id="vote-form" style="display: none;">
+            <p>Enter your voting selection:</p>
+            <!-- Here you can add input fields or buttons for voting selection -->
+            <button id="vote-button">Vote</button>
+        </div>
+    </div>
+
+    <script src="web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
