@@ -34,7 +34,7 @@ To run the JOKA Voting App locally, you need to install the following dependenci
 1. **Clone the Repository:** Clone the JOKA Voting App repository to your local machine.
 
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Karushi536/Block-chain-website.git
     ```
 
 2. **Install Dependencies:** Navigate to the project directory and install the required dependencies using npm.
