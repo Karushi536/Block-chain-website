@@ -37,45 +37,27 @@ To run the JOKA Voting App locally, you need to install the following dependenci
     git clone https://github.com/Karushi536/Block-chain-website.git
     ```
 
-2. **Install Dependencies:** Navigate to the project directory and install the required dependencies using npm.
+### Dependencies:
+- [Nodejs 5.0+](https://nodejs.org/en/)
+- [Truffle](https://github.com/trufflesuite/truffle)
+- [Ganache](http://truffleframework.com/ganache/)
 
-    ```bash
-    cd joka-voting-app
-    npm install
-    ```
-
-3. **Compile Contracts:** Compile the smart contracts using Truffle.
-
-    ```bash
-    truffle compile
-    ```
-
-4. **Configure Ganache:** Open Ganache and create a new workspace. Note the RPC server URL and port number.
-
-## Running the App
-
-1. **Start Ganache:** Run Ganache and ensure it is running on the configured RPC server URL and port.
-
-2. **Migrate Contracts:** Migrate the smart contracts to the local blockchain.
-
-    ```bash
-    truffle migrate --reset
-    ```
-
-3. **Start the Client:** Start the client-side application.
-
-    ```bash
-    npm start
-    ```
-
-4. **Access the App:** Open your web browser and navigate to `http://localhost:3000` to access the JOKA Voting App.
-
-## Testing
-
-To run tests for the smart contracts, use the following command:
-
-```bash
-truffle test
+## Setup
+```
+npm install -g truffle
+git clone https://github.com/Karushi536/Block-chain-website.git
+cd eth-voting-dapp
+npm install
+```
+Then, open up a new terminal tab:
+```
+truffle develop
+> compile
+> migrate
+```
+Go back to your previous tab:
+```
+npm run dev
 ```
 
 ## Contributing
