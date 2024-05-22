@@ -1,70 +1,43 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Get DOM elements
-    const votingIdForm = document.querySelector(".voting-id-form");
-    const positionsSection = document.getElementById("positions");
-    const submitButton = document.getElementById("submit-button");
-
-    // Event listener for submit button
-    submitButton.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent default form submission behavior
-
-        // Hide voting ID form and show positions section
-        votingIdForm.style.display = "none";
-        positionsSection.style.display = "block";
-    });
-
-    // Event listener for position links
-    const positions = ["presidency", "deputy-presidency", "governor", "deputy-governor", "senator", "mp"];
-    positions.forEach(position => {
-        const positionLink = document.getElementById(`${position}-link`);
-        positionLink.addEventListener("click", function(event) {
-            event.preventDefault(); // Prevent default link behavior
-            // Show candidates list for the selected position
-            displayCandidates(position);
-        });
-    });
-
-    // Function to display candidates for a given position
-    function displayCandidates(position) {
-        // Mock candidate data (Replace this with actual data from your backend)
-        const candidatesData = {
-            presidency: [
-                { name: "Candidate 1", party: "Party A", image: "candidate1.jpg" },
-                { name: "Candidate 2", party: "Party B", image: "candidate2.jpg" }
-            ],
-            // Add data for other positions as needed
-        };
-
-        // Get candidates list container
-        const candidatesList = document.getElementById("candidates-list");
-        // Clear previous candidates
-        candidatesList.innerHTML = "";
-
-        // Fetch candidates data for the selected position
-        const candidates = candidatesData[position];
-
-        // Display candidates
-        candidates.forEach(candidate => {
-            const candidateElement = document.createElement("div");
-            candidateElement.classList.add("candidate");
-
-            const imageElement = document.createElement("img");
-            imageElement.src = candidate.image;
-            candidateElement.appendChild(imageElement);
-
-            const nameElement = document.createElement("p");
-            nameElement.textContent = candidate.name;
-            candidateElement.appendChild(nameElement);
-
-            const partyElement = document.createElement("p");
-            partyElement.textContent = `Party: ${candidate.party}`;
-            candidateElement.appendChild(partyElement);
-
-            candidatesList.appendChild(candidateElement);
-        });
-
-        // Hide positions section and show vote form
-        positionsSection.style.display = "none";
-        document.getElementById("vote-form").style.display = "block";
+document.getElementById('submit-button').addEventListener('click', function() {
+    const voterId = document.getElementById('voter-id').value;
+    if (voterId) {
+        document.getElementById('positions').style.display = 'block';
+    } else {
+        alert('Please enter a valid voting ID.');
     }
+});
+
+const positions = ['presidency', 'governorship', 'senate', 'mp', 'mca'];
+positions.forEach(position => {
+    document.getElementById(position).addEventListener('click', function() {
+        showCandidates(position);
+    });
+});
+
+function showCandidates(position) {
+    let candidatesHTML = '';
+    switch(position) {
+        case 'presidency':
+            candidatesHTML = '<p>Presidential Candidates: Candidate A, Candidate B</p>';
+            break;
+        case 'governorship':
+            candidatesHTML = '<p>Gubernatorial Candidates: Candidate C, Candidate D</p>';
+            break;
+        case 'senate':
+            candidatesHTML = '<p>Senate Candidates: Candidate E, Candidate F</p>';
+            break;
+        case 'mp':
+            candidatesHTML = '<p>MP Candidates: Candidate G, Candidate H</p>';
+            break;
+        case 'mca':
+            candidatesHTML = '<p>MCA Candidates: Candidate I, Candidate J</p>';
+            break;
+    }
+    document.getElementById('candidates-list').innerHTML = candidatesHTML;
+    document.getElementById('vote-form').style.display = 'block';
+}
+
+document.getElementById('vote-button').addEventListener('click', function() {
+    // Add code here to handle the voting process
+    alert('Vote submitted!');
 });
