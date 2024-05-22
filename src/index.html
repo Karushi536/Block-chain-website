@@ -13,7 +13,8 @@
         <!-- Voting ID Form -->
         <div class="voting-id-form">
             <p>Please enter your voting ID:</p>
-            <input type="text" id="voter-id" placeholder="Enter your ID">
+            <!-- Set maxlength attribute to limit input to 10 characters -->
+            <input type="text" id="voter-id" placeholder="Enter your ID" maxlength="10">
             <button id="submit-button">Submit</button>
         </div>
 
@@ -38,6 +39,11 @@
                 <button type="submit" id="vote-button">Vote</button>
             </form>
         </div>
+    </div>
+
+    <!-- Prompt to move to the next post (Initially hidden) -->
+    <div id="next-post-prompt" style="display: none;">
+        <p>Vote submitted! You can now move to the next post.</p>
     </div>
 
     <script src="web3.min.js"></script> <!-- Include only if necessary -->

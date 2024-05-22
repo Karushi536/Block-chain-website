@@ -34,6 +34,7 @@ input[type="text"] {
     border-radius: 5px;
     font-size: 1em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-length: 10; /* Added maximum length */
 }
 
 button {
@@ -152,4 +153,21 @@ button:hover {
 #back-button:hover, #vote-button:hover {
     background-color: #009acd;
     transform: scale(1.05);
+}
+
+#next-post-prompt {
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00bfff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+#next-post-prompt:hover {
+    background-color: #009acd;
 }

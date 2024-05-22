@@ -18,7 +18,7 @@ positions.forEach(position => {
 function showCandidates(position) {
     const candidatesData = {
         president: [
-            { name: 'John Doe', photo: 'john_doe.jpg' },
+            { name: 'Joseph Njoroge', photo: 'images\Joseph_Njoroge.png' },
             { name: 'Jane Smith', photo: 'jane_smith.jpg' },
             { name: 'Sam Wilson', photo: 'sam_wilson.jpg' },
             { name: 'Linda Taylor', photo: 'linda_taylor.jpg' },
@@ -82,14 +82,24 @@ function showCandidates(position) {
 
     positionsSection.style.display = 'none';
     candidatesListSection.style.display = 'block';
+    document.getElementById('vote-button').setAttribute('data-position', position); // Set data-position attribute for vote button
 }
 
 document.getElementById('candidates-form').addEventListener('submit', function(event) {
     event.preventDefault();
     const selectedCandidate = document.querySelector('input[name="candidate"]:checked');
+    const position = document.getElementById('vote-button').getAttribute('data-position');
     if (selectedCandidate) {
         // Add code here to handle the voting process
-        alert('Vote submitted!');
+        alert(`Vote for ${selectedCandidate.value} submitted for ${position}.`);
+        document.getElementById('positions').style.display = 'block'; // Show positions after voting
+        document.getElementById('candidates-list').style.display = 'none'; // Hide candidates list after voting
+        if (position === 'mca') {
+            // Show thank you message after the last position
+            alert('Thank you for participating in your citizen role!');
+        } else {
+            document.getElementById('next-post-prompt').style.display = 'block'; // Show next post prompt
+        }
     } else {
         alert('Please select a candidate.');
     }
@@ -98,4 +108,9 @@ document.getElementById('candidates-form').addEventListener('submit', function(e
 document.getElementById('back-button').addEventListener('click', () => {
     document.getElementById('candidates-list').style.display = 'none';
     document.getElementById('positions').style.display = 'block';
+});
+
+document.getElementById('next-post-prompt').addEventListener('click', () => {
+    document.getElementById('next-post-prompt').style.display = 'none';
+    // Add code here to handle moving to the next post
 });
