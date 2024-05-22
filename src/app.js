@@ -7,37 +7,95 @@ document.getElementById('submit-button').addEventListener('click', function() {
     }
 });
 
-const positions = ['presidency', 'governorship', 'senate', 'mp', 'mca'];
+const positions = ['president', 'governor', 'senate', 'mp', 'mca'];
 positions.forEach(position => {
-    document.getElementById(position).addEventListener('click', function() {
+    document.querySelector(`[data-position="${position}"]`).addEventListener('click', function(event) {
+        event.preventDefault();
         showCandidates(position);
     });
 });
 
 function showCandidates(position) {
-    let candidatesHTML = '';
-    switch(position) {
-        case 'presidency':
-            candidatesHTML = '<p>Presidential Candidates: Candidate A, Candidate B</p>';
-            break;
-        case 'governorship':
-            candidatesHTML = '<p>Gubernatorial Candidates: Candidate C, Candidate D</p>';
-            break;
-        case 'senate':
-            candidatesHTML = '<p>Senate Candidates: Candidate E, Candidate F</p>';
-            break;
-        case 'mp':
-            candidatesHTML = '<p>MP Candidates: Candidate G, Candidate H</p>';
-            break;
-        case 'mca':
-            candidatesHTML = '<p>MCA Candidates: Candidate I, Candidate J</p>';
-            break;
-    }
-    document.getElementById('candidates-list').innerHTML = candidatesHTML;
-    document.getElementById('vote-form').style.display = 'block';
+    const candidatesData = {
+        president: [
+            { name: 'John Doe', photo: 'john_doe.jpg' },
+            { name: 'Jane Smith', photo: 'jane_smith.jpg' },
+            { name: 'Sam Wilson', photo: 'sam_wilson.jpg' },
+            { name: 'Linda Taylor', photo: 'linda_taylor.jpg' },
+            { name: 'Michael Brown', photo: 'michael_brown.jpg' },
+            { name: 'Susan Green', photo: 'susan_green.jpg' }
+        ],
+        governor: [
+            { name: 'Alice Johnson', photo: 'alice_johnson.jpg' },
+            { name: 'Bob Brown', photo: 'bob_brown.jpg' },
+            { name: 'Charlie Davis', photo: 'charlie_davis.jpg' },
+            { name: 'Dana White', photo: 'dana_white.jpg' },
+            { name: 'Eve Black', photo: 'eve_black.jpg' },
+            { name: 'Frank Green', photo: 'frank_green.jpg' }
+        ],
+        senate: [
+            { name: 'Grace Lee', photo: 'grace_lee.jpg' },
+            { name: 'Hank Hill', photo: 'hank_hill.jpg' },
+            { name: 'Ivy King', photo: 'ivy_king.jpg' },
+            { name: 'Jackie Chan', photo: 'jackie_chan.jpg' },
+            { name: 'Kyle Lowry', photo: 'kyle_lowry.jpg' },
+            { name: 'Laura Moon', photo: 'laura_moon.jpg' }
+        ],
+        mp: [
+            { name: 'Monica Green', photo: 'monica_green.jpg' },
+            { name: 'Nathan Drake', photo: 'nathan_drake.jpg' },
+            { name: 'Oscar Wilde', photo: 'oscar_wilde.jpg' },
+            { name: 'Paul Harris', photo: 'paul_harris.jpg' },
+            { name: 'Quincy Adams', photo: 'quincy_adams.jpg' },
+            { name: 'Rachel Brown', photo: 'rachel_brown.jpg' }
+        ],
+        mca: [
+            { name: 'Steve Jobs', photo: 'steve_jobs.jpg' },
+            { name: 'Tim Cook', photo: 'tim_cook.jpg' },
+            { name: 'Uma Thurman', photo: 'uma_thurman.jpg' },
+            { name: 'Vince Gilligan', photo: 'vince_gilligan.jpg' },
+            { name: 'Wendy Davis', photo: 'wendy_davis.jpg' },
+            { name: 'Xander Cage', photo: 'xander_cage.jpg' }
+        ]
+    };
+
+    const candidatesListSection = document.getElementById('candidates-list');
+    const positionsSection = document.getElementById('positions');
+    const candidateCards = document.getElementById('candidate-cards');
+    const positionTitle = document.getElementById('position-title');
+
+    positionTitle.textContent = position.charAt(0).toUpperCase() + position.slice(1);
+    candidateCards.innerHTML = '';
+
+    candidatesData[position].forEach((candidate, index) => {
+        const card = document.createElement('div');
+        card.classList.add('candidate-card');
+        card.innerHTML = `
+            <input type="radio" id="candidate-${index}" name="candidate" value="${candidate.name}">
+            <label for="candidate-${index}">
+                <img src="${candidate.photo}" alt="${candidate.name}">
+                <p>${candidate.name}</p>
+            </label>
+        `;
+        candidateCards.appendChild(card);
+    });
+
+    positionsSection.style.display = 'none';
+    candidatesListSection.style.display = 'block';
 }
 
-document.getElementById('vote-button').addEventListener('click', function() {
-    // Add code here to handle the voting process
-    alert('Vote submitted!');
+document.getElementById('candidates-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const selectedCandidate = document.querySelector('input[name="candidate"]:checked');
+    if (selectedCandidate) {
+        // Add code here to handle the voting process
+        alert('Vote submitted!');
+    } else {
+        alert('Please select a candidate.');
+    }
+});
+
+document.getElementById('back-button').addEventListener('click', () => {
+    document.getElementById('candidates-list').style.display = 'none';
+    document.getElementById('positions').style.display = 'block';
 });

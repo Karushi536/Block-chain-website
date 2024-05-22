@@ -21,21 +21,22 @@
         <div class="positions" id="positions" style="display: none;">
             <h2>Positions</h2>
             <div class="navigation">
-                <a href="#" id="presidency" class="nav-button">President</a>
-                <a href="#" id="governorship" class="nav-button">Governor</a>
-                <a href="#" id="senate" class="nav-button">Senate</a>
-                <a href="#" id="mp" class="nav-button">MP</a>
-                <a href="#" id="mca" class="nav-button">MCA</a>
+                <a href="#" data-position="president" class="nav-button">President</a>
+                <a href="#" data-position="governor" class="nav-button">Governor</a>
+                <a href="#" data-position="senate" class="nav-button">Senate</a>
+                <a href="#" data-position="mp" class="nav-button">MP</a>
+                <a href="#" data-position="mca" class="nav-button">MCA</a>
             </div>
         </div>
 
-        <!-- Candidates List Section -->
-        <div class="candidates-list" id="candidates-list"></div>
-
-        <!-- Vote Form (Initially hidden) -->
-        <div class="vote-form" id="vote-form" style="display: none;">
-            <p>Enter your voting selection:</p>
-            <button id="vote-button">Vote</button>
+        <!-- Candidates List Section (Initially hidden) -->
+        <div class="candidates-list" id="candidates-list" style="display: none;">
+            <h2>Candidates for <span id="position-title"></span></h2>
+            <form id="candidates-form">
+                <div id="candidate-cards"></div>
+                <button type="button" id="back-button">Back</button>
+                <button type="submit" id="vote-button">Vote</button>
+            </form>
         </div>
     </div>
 
