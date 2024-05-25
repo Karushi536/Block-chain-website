@@ -18,44 +18,44 @@ positions.forEach(position => {
 function showCandidates(position) {
     const candidatesData = {
         president: [
-            { name: 'Joseph Njoroge', photo: 'images\Joseph_Njoroge.png' },
-            { name: 'Jane Smith', photo: 'jane_smith.jpg' },
-            { name: 'Sam Wilson', photo: 'sam_wilson.jpg' },
-            { name: 'Linda Taylor', photo: 'linda_taylor.jpg' },
-            { name: 'Michael Brown', photo: 'michael_brown.jpg' },
-            { name: 'Susan Green', photo: 'susan_green.jpg' }
+            { name: 'Joseph Njoroge', photo: 'src\images\Joseph_Njoroge.png' },
+            { name: 'Jane Smith', photo: 'images\Joseph_Njoroge.png' },
+            { name: 'Sam Wilson', photo: 'images\Joseph_Njoroge.png' },
+            { name: 'Linda Taylor', photo: 'images\Joseph_Njoroge.png' },
+            { name: 'Michael Brown', photo: 'images\Joseph_Njoroge.png' },
+            { name: 'Susan Green', photo: 'images\Joseph_Njoroge.png' }
         ],
         governor: [
-            { name: 'Alice Johnson', photo: 'alice_johnson.jpg' },
-            { name: 'Bob Brown', photo: 'bob_brown.jpg' },
-            { name: 'Charlie Davis', photo: 'charlie_davis.jpg' },
-            { name: 'Dana White', photo: 'dana_white.jpg' },
-            { name: 'Eve Black', photo: 'eve_black.jpg' },
-            { name: 'Frank Green', photo: 'frank_green.jpg' }
+            { name: 'Alice Johnson', photo: 'images\Joseph_Njoroge.png' },
+            { name: 'Bob Brown', photo: 'images\Joseph_Njoroge.png' },
+            { name: 'Charlie Davis', photo: 'images\Joseph_Njoroge.png' },
+            { name: 'Dana White', photo: 'images\Joseph_Njoroge.png' },
+            { name: 'Eve Black', photo: 'images\Joseph_Njoroge.png.jpg' },
+            { name: 'Frank Green', photo: 'images\Joseph_Njoroge.png.jpg' }
         ],
         senate: [
-            { name: 'Grace Lee', photo: 'grace_lee.jpg' },
-            { name: 'Hank Hill', photo: 'hank_hill.jpg' },
-            { name: 'Ivy King', photo: 'ivy_king.jpg' },
-            { name: 'Jackie Chan', photo: 'jackie_chan.jpg' },
-            { name: 'Kyle Lowry', photo: 'kyle_lowry.jpg' },
-            { name: 'Laura Moon', photo: 'laura_moon.jpg' }
+            { name: 'Grace Lee', photo: 'grace_lee.images\Joseph_Njoroge.png' },
+            { name: 'Hank Hill', photo: 'images\Joseph_Njoroge.png.jpg' },
+            { name: 'Ivy King', photo: 'images\Joseph_Njoroge.png.jpg' },
+            { name: 'Jackie Chan', photo: 'images\Joseph_Njoroge.png' },
+            { name: 'Kyle Lowry', photo: 'images\Joseph_Njoroge.png.jpg' },
+            { name: 'Laura Moon', photo: 'images\Joseph_Njoroge.png' }
         ],
         mp: [
-            { name: 'Monica Green', photo: 'monica_green.jpg' },
-            { name: 'Nathan Drake', photo: 'nathan_drake.jpg' },
-            { name: 'Oscar Wilde', photo: 'oscar_wilde.jpg' },
-            { name: 'Paul Harris', photo: 'paul_harris.jpg' },
-            { name: 'Quincy Adams', photo: 'quincy_adams.jpg' },
-            { name: 'Rachel Brown', photo: 'rachel_brown.jpg' }
+            { name: 'Monica Green', photo: 'images\Joseph_Njoroge.png' },
+            { name: 'Nathan Drake', photo: 'images\Joseph_Njoroge.png' },
+            { name: 'Oscar Wilde', photo: 'images\Joseph_Njoroge.png.jpg' },
+            { name: 'Paul Harris', photo: 'images\Joseph_Njoroge.png.jpg' },
+            { name: 'Quincy Adams', photo: 'images\Joseph_Njoroge.png.jpg' },
+            { name: 'Rachel Brown', photo: 'images\Joseph_Njoroge.png.jpg' }
         ],
         mca: [
-            { name: 'Steve Jobs', photo: 'steve_jobs.jpg' },
-            { name: 'Tim Cook', photo: 'tim_cook.jpg' },
-            { name: 'Uma Thurman', photo: 'uma_thurman.jpg' },
-            { name: 'Vince Gilligan', photo: 'vince_gilligan.jpg' },
-            { name: 'Wendy Davis', photo: 'wendy_davis.jpg' },
-            { name: 'Xander Cage', photo: 'xander_cage.jpg' }
+            { name: 'Steve Jobs', photo: 'images\Joseph_Njoroge.png.jpg' },
+            { name: 'Tim Cook', photo: 'images\Joseph_Njoroge.png.jpg' },
+            { name: 'Uma Thurman', photo: 'images\Joseph_Njoroge.png.jpg' },
+            { name: 'Vince Gilligan', photo: 'images\Joseph_Njoroge.png.jpg' },
+            { name: 'Wendy Davis', photo: 'images\Joseph_Njoroge.png.jpg' },
+            { name: 'Xander Cage', photo: 'images\Joseph_Njoroge.png.jpg' }
         ]
     };
 
