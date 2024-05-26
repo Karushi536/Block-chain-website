@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - JOKA Voting App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(180deg, #0000ff, #00faff);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(90deg, #0000ff, #00faff);
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #00faff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .step {
+            background: linear-gradient(135deg, #0000ff, #00faff);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            width: 100%;
+            max-width: 370px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            position: relative;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .step:hover {
+            transform: scale(1.05);
+        }
+        .step img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        .step h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .step p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: linear-gradient(90deg, #0000ff, #00faff);
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>How It Works</h1>
+        <div class="section">
+            <h2>Understanding the Voting Process</h2>
+            <p>
+                The JOKA Voting App is designed to simplify the voting process, ensuring that your vote is secure and counted accurately. Follow the steps below to understand how to cast your vote using our app.
+            </p>
+        </div>
+        <div class="steps">
+            <div class="step">
+                <img src="images/register.png" alt="Register">
+                <h3>Step 1: Register</h3>
+                <p>
+                    Register for an account using your personal details. Ensure that your information is accurate to avoid any issues during the voting process.
+                </p>
+            </div>
+            <div class="step">
+                <img src="images/verify.png" alt="Verify Identity">
+                <h3>Step 2: Verify Your Identity</h3>
+                <p>
+                    Verify your identity through the app's secure verification process. This ensures that each vote is legitimate and that the voting process is secure.
+                </p>
+            </div>
+            <div class="step">
+                <img src="images/select_position.png" alt="Select Position">
+                <h3>Step 3: Select the Position</h3>
+                <p>
+                    Choose the position you want to vote for (e.g., President, Governor, Senate, MP, MCA). The app will guide you through the available positions one by one.
+                </p>
+            </div>
+            <div class="step">
+                <img src="images/choose_candidate.png" alt="Choose Candidate">
+                <h3>Step 4: Choose a Candidate</h3>
+                <p>
+                    Browse through the list of candidates for the selected position. Click on a candidate's photo to select them, then confirm your vote by clicking the 'Vote' button.
+                </p>
+            </div>
+            <div class="step">
+                <img src="images/review.png" alt="Review and Confirm">
+                <h3>Step 5: Review and Confirm</h3>
+                <p>
+                    Review your selections to ensure they are correct. Once you are satisfied, submit your votes. You will receive a confirmation message once your votes have been successfully submitted.
+                </p>
+            </div>
+            <div class="step">
+                <img src="images/confirmation.png" alt="Confirmation">
+                <h3>Step 6: Confirmation</h3>
+                <p>
+                    After voting, you will see a confirmation page with a 'Thumbs Up' image, thanking you for participating in the democratic process.
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 JOKA Voting App. All rights reserved.</p>
+    </footer>
+</body>
+</html>

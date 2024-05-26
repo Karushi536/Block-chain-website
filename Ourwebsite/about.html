@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - JOKA Voting App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffdd59;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .about-content {
+            font-size: 1.5em;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .team-member {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            width: 100%;
+            max-width: 350px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            position: relative;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .team-member:hover {
+            transform: scale(1.05);
+        }
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .team-member h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .team-member p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>About JOKA Voting App</h1>
+        <p class="about-content">
+            The JOKA Voting App is designed to revolutionize the voting process by making it more secure, transparent, and accessible for everyone. Our mission is to ensure that every vote counts and that the integrity of the voting process is maintained.
+        </p>
+        <div class="team">
+            <div class="team-member">
+                <img src="images/joseph.png" alt="Joseph Njoroge">
+                <h3>Joseph Njoroge</h3>
+                <p>Full Stack Software Developer<br>Zeal for Cyber Security and AI Knowledge</p>
+            </div>
+            <div class="team-member">
+                <img src="images/abiggael.png" alt="Abiggael Karushi">
+                <h3>Abiggael Karushi</h3>
+                <p>Software Engineering Student<br>Zeal for Cyber Security</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 JOKA Voting App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
